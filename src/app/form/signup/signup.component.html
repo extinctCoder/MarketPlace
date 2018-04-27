@@ -1,0 +1,94 @@
+<div>
+  <div class="pb-2 mt-4 mb-2 border-bottom">
+    <h2>SIGN UP</h2>
+  </div>
+  <div class="container">
+    <form #frm="ngForm">
+      <div class="form-group">
+        <label for="uName">NAME</label>
+        <input type="text" name="uName" id="uName"
+         class="form-control"
+         [(ngModel)]="uName" [value]="uName">
+      </div>
+      <div class="form-group">
+        <label for="userName">USER NAME</label>
+        <input type="text" name="userName" id="userName"
+        class="form-control"  [class.border-danger]="frm.controls.userName?.touched && frm.controls.userName?.invalid"
+               required
+        [(ngModel)]="userName" [value]="userName">
+      </div>
+      <div class="form-group">
+        <label for="password">PASSWORD</label>
+        <input type="password" name="password" id="password"
+        class="form-control" [class.border-danger]="frm.controls.password?.touched && frm.controls.password?.invalid"
+               required
+        [(ngModel)]="password" [value]="password">
+      </div>
+      <div class="form-group">
+        <label for="confirmPassword">CONFIRM PASSWORD</label>
+        <input type="password" name="confirmPassword" id="confirmPassword"
+        class="form-control" [class.border-danger]="frm.controls.confirmPassword?.touched && frm.controls.confirmPassword?.invalid"
+               required
+        [(ngModel)]="confirmPassword" [value]="confirmPassword">
+      </div>
+      <div class="form-group">
+        <label for="accountType">ACCOUNT TYPE</label>
+        <select name="accountType" id="accountType"
+        class="form-control"  [class.border-danger]="frm.controls.accountType?.touched && frm.controls.accountType?.invalid"
+                required
+        [(ngModel)]="accountType" (select)="accountType">
+          <option value="buyer">buyer</option>
+          <option value="vendor">vendor</option>
+          <option value="admin">admin</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="emailId">EMAIL ID</label>
+        <input type="email" name="emailId" id="emailId"
+        class="form-control"
+        [(ngModel)]="emailId" [value]="emailId">
+      </div>
+      <div class="form-group">
+        <label for="houseNo">HOUSE NO</label>
+        <input type="text" name="houseNo" id="houseNo"
+        class="form-control"
+        [(ngModel)]="houseNo" [value]="houseNo">
+      </div>
+      <div class="form-group">
+        <label for="roadNo">ROAD NO</label>
+        <input type="text" name="houseNo" id="roadNo"
+        class="form-control"
+        [(ngModel)]="roadNo" [value]="roadNo">
+      </div>
+      <div class="form-group">
+        <label for="area">AREA</label>
+        <input type="text" name="area" id="area"
+        class="form-control"
+        [(ngModel)]="area" [value]="area">
+      </div>
+      <div class="form-group">
+        <label for="zipCode">ZIP CODE</label>
+        <input type="text" name="zipCode" id="zipCode"
+        class="form-control"
+        [(ngModel)]="zipCode" [value]="zipCode">
+      </div>
+      <div class="form-group">
+        <label for="city">CITY</label>
+        <input type="text" name="city" id="city"
+               class="form-control"
+               [(ngModel)]="city" [value]="city">
+      </div>
+      <div class="form-group">
+        <label for="country">COUNTRY</label>
+        <input type="text" name="country" id="country"
+               class="form-control"
+               [(ngModel)]="country" [value]="country">
+      </div>
+      <button id="signup" name="signup" type="submit"
+              class="btn btn-block"
+              [disabled]="frm.invalid"
+      (click)="signUp()">SIGN UP</button>
+    </form>
+  </div>
+</div>
+{{newEntity|json}}

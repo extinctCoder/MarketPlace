@@ -1,0 +1,96 @@
+<div>
+  <div class="pb-2 mt-4 mb-2 border-bottom">
+    <h2>ADD PRODUCT</h2>
+  </div>
+  <div class="container">
+    <form #frm="ngForm">
+      <div class="form-group">
+        <label for="pName">NAME</label>
+        <input type="text" name="pName" id="pName"
+               class="form-control"
+               [(ngModel)]="pName" [value]="pName">
+      </div>
+      <div class="form-group">
+        <label for="productStatus">PRODUCT STATUS</label>
+        <select name="productStatus" id="productStatus"
+                class="form-control"
+                [(ngModel)]="productStatus" (select)="productStatus">
+          <option value="allow">allow</option>
+          <option value="reject">reject</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="actPrice">ACTUAL PRICE</label>
+        <input type="text" name="actPrice" id="actPrice"
+               class="form-control"
+               [(ngModel)]="actPrice" [value]="actPrice">
+      </div>
+      <div class="form-group">
+        <label for="priceType">PRICE TYPE</label>
+        <select name="priceType" id="priceType"
+                class="form-control"
+                [(ngModel)]="priceType" (select)="priceType">
+          <option value="percen">percen</option>
+          <option value="amount">amount</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="priceRate">PRICE RATE</label>
+        <input type="text" name="priceRate" id="priceRate"
+               class="form-control"
+               [(ngModel)]="priceRate" [value]="priceRate">
+      </div>
+      <div class="form-group">
+        <label for="vatType">VAT TYPE</label>
+        <select name="vatType" id="vatType"
+                class="form-control"
+                [(ngModel)]="vatType" (select)="vatType">
+          <option value="percen">percen</option>
+          <option value="amount">amount</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="vatRate">VAT RATE</label>
+        <input type="text" name="vatRate" id="vatRate"
+               class="form-control"
+               [(ngModel)]="vatRate" [value]="vatRate">
+      </div>
+      <div class="form-group">
+        <label for="quantity">QUANTITY</label>
+        <input type="text" name="quantity" id="quantity"
+               class="form-control"
+               [(ngModel)]="quantity" [value]="quantity">
+      </div>
+      <div class="form-group">
+        <label for="minQuantity">MINIMUM QUANTITY</label>
+        <input type="text" name="minQuantity" id="minQuantity"
+               class="form-control"
+               [(ngModel)]="minQuantity" [value]="minQuantity">
+      </div>
+      <div class="form-group">
+        <label for="alertQuantity">ALERT QUANTITY</label>
+        <input type="text" name="alertQuantity" id="alertQuantity"
+               class="form-control"
+               [(ngModel)]="alertQuantity" [value]="alertQuantity">
+      </div>
+      <div class="form-group">
+        <label for="picUrl">PICTURE URL</label>
+        <input type="text" name="picUrl" id="picUrl"
+               class="form-control"
+               [(ngModel)]="picUrl" [value]="picUrl">
+      </div>
+      <div class="form-group">
+        <label for="pDescription">DESCRIPTION</label>
+        <input type="text" name="pDescription" id="pDescription"
+               class="form-control"
+               [(ngModel)]="pDescription" [value]="pDescription">
+      </div>
+      <button id="signup" name="signup" type="submit"
+              class="btn btn-block"
+              (click)="addProduct()">ADD PRODUCT</button>
+    </form>
+  </div>
+</div>
+
+
+{{addProduct|json}}

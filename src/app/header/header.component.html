@@ -1,0 +1,37 @@
+<nav class="navbar sticky-top navbar-expand-md bg-primary navbar-dark">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/">Online Market Place</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+
+        <ul *ngIf="userNav == true"  class="navbar-nav ml-auto">
+
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/addcategory">ADD CATEGORY</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/addproduct">ADD PRODUCT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/addproduct">{{entity.name}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/signout">SIGN OUT</a>
+          </li>
+        </ul>
+
+        <ul *ngIf="userNav  == false"  class="navbar-nav ml-auto">
+
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/signin">SIGN IN</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/signup">SIGN UP</a>
+          </li>
+        </ul>
+
+    </div>
+  </div>
+</nav>

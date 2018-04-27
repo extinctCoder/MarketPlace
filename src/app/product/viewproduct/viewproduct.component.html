@@ -1,0 +1,44 @@
+<div class="container" hidden={{isHidden}}>
+  <div class="pb-2 mt-4 mb-2 border-bottom">
+    <h2>{{pName}}</h2>
+  </div>
+  <div class="row">
+    <div class="col-4 align-self-center text-center">
+      <img class="img-thumbnail" src="{{picUrl}}" alt="img">
+    </div>
+    <div class="col-8">
+      <h5 class="text-justify">
+        <table class="table table-striped">
+          <tr>
+            <td class="text-right">Name : </td>
+            <td class="text-left">{{pName}}</td>
+          </tr>
+          <tr>
+            <td class="text-right">Price : </td>
+            <td class="text-left">{{price}}</td>
+          </tr>
+          <tr>
+            <td class="text-right">Quantity : </td>
+            <td class="text-left">{{quantity}}</td>
+          </tr>
+          <tr>
+            <td class="text-right">Vat : </td>
+            <td class="text-left">{{vat}}</td>
+          </tr>
+          <tr>
+            <td>
+              <input type="text" class="form-control">
+            </td>
+            <td>
+              <button class="btn">Add to cart</button>
+            </td>
+          </tr>
+        </table>
+      </h5>
+    </div>
+  </div>
+  <div class="row">
+    <h6>Description</h6>
+    <p class="container">{{pDescription}}</p>
+  </div>
+</div>

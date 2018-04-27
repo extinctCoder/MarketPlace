@@ -1,0 +1,27 @@
+<div>
+  <div class="pb-2 mt-4 mb-2 border-bottom">
+    <h2>SIGN IN</h2>
+  </div>
+  <div class="container">
+    <form #frm="ngForm">
+      <div class="form-group">
+        <label for="userName">USER NAME</label>
+        <input type="text" name="userName" id="userName"
+               class="form-control"  [class.border-danger]="frm.controls.userName?.touched && frm.controls.userName?.invalid"
+               required
+               [(ngModel)]="userName" [value]="userName">
+      </div>
+      <div class="form-group">
+        <label for="password">PASSWORD</label>
+        <input type="password" name="password" id="password"
+               class="form-control" [class.border-danger]="frm.controls.password?.touched && frm.controls.password?.invalid"
+               required
+               [(ngModel)]="password" [value]="password">
+      </div>
+      <button id="signup" name="signup" type="submit"
+              class="btn btn-block"
+              [disabled]="frm.invalid"
+              (click)="signIn()">SIGN IN</button>
+    </form>
+  </div>
+</div>

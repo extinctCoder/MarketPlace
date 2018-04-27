@@ -1,0 +1,21 @@
+<div *ngFor="let product of productList">
+  <app-viewproduct
+  [pId]="product.id"
+  [pStatus]="product.status"
+  [pName]="product.name"
+  [actPrice]="product.act_price"
+  [priceType]="product.price_type"
+  [priceRate]="product.price_rate"
+  [actVat]="product.vat_rate"
+  [vatType]="product.vat_type"
+  [vatRate]="product.vat_rate"
+  [minQuantity]="product.min_quantity"
+  [alertQuantity]="product.alert_quantity"
+  [quantity]="product.quantity"
+
+
+  [pDescription]="product.pDescription"
+  >
+
+  </app-viewproduct>
+</div>
